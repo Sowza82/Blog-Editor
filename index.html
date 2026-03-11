@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SowzaTech Blog</title>
+
+<meta name="description" content="Blog de tecnologia da SowzaTech com artigos sobre programação, desenvolvimento web e inovação.">
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="logo">
+SowzaTech Blog
+</div>
+
+<nav class="nav">
+<a href="editor.html" class="btn btn-read">Novo Post</a>
+</nav>
+
+</header>
+
+
+<main class="container">
+
+<h1 class="page-title">Artigos Recentes</h1>
+
+<!-- BUSCA -->
+
+<div class="search-box">
+
+<label for="search" class="sr-only">Buscar artigo</label>
+
+<input
+type="text"
+id="search"
+placeholder="🔎 Buscar artigo..."
+class="search"
+/>
+
+</div>
+
+
+<!-- POSTS -->
+
+<section id="posts-container" class="posts-grid"></section>
+
+
+<!-- ESTADO VAZIO -->
+
+<section id="empty-posts" class="empty-posts" style="display:none">
+
+<h3>Nenhum post encontrado</h3>
+
+<p>Comece criando seu primeiro artigo.</p>
+
+<a href="editor.html" class="btn btn-read">Criar Post</a>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+<p>© 2026 SowzaTech • Blog de tecnologia</p>
+
+</footer>
+
+<script src="js/posts.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,499 @@
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:"Segoe UI",system-ui,-apple-system,sans-serif;
+background:#f4f6f9;
+color:#333;
+line-height:1.6;
+}
+
+
+/* HEADER */
+
+.header{
+background:#111827;
+color:white;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.logo{
+font-size:22px;
+font-weight:700;
+letter-spacing:.5px;
+}
+
+.header h1{
+font-size:20px;
+}
+
+.nav{
+display:flex;
+gap:12px;
+}
+
+.nav a{
+color:white;
+text-decoration:none;
+font-size:14px;
+transition:.3s;
+}
+
+.nav a:hover{
+opacity:.7;
+}
+
+
+/* BOTÕES */
+
+.btn{
+padding:8px 14px;
+border-radius:8px;
+font-size:13px;
+cursor:pointer;
+border:none;
+transition:.25s;
+text-decoration:none;
+display:inline-block;
+font-weight:500;
+}
+
+.btn-read{
+background:#2563eb;
+color:white;
+}
+
+.btn-read:hover{
+background:#1d4ed8;
+}
+
+.btn-edit{
+background:#f59e0b;
+color:white;
+}
+
+.btn-edit:hover{
+background:#d97706;
+}
+
+.btn-delete{
+background:#ef4444;
+color:white;
+}
+
+.btn-delete:hover{
+background:#dc2626;
+}
+
+.btn-add-cat{
+background:#6366f1;
+color:white;
+font-size:12px;
+padding:6px 10px;
+border-radius:6px;
+}
+
+.btn-add-cat:hover{
+background:#4f46e5;
+}
+
+
+/* CONTAINER */
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+padding:40px 0;
+}
+
+.page-title{
+text-align:center;
+margin-bottom:30px;
+font-size:28px;
+color:#111827;
+}
+
+
+/* BUSCA */
+
+.search-box{
+margin-bottom:30px;
+display:flex;
+justify-content:center;
+}
+
+.search{
+width:100%;
+max-width:500px;
+padding:12px 16px;
+border-radius:10px;
+border:1px solid #ddd;
+font-size:14px;
+transition:.25s;
+}
+
+.search:focus{
+border-color:#2563eb;
+outline:none;
+box-shadow:0 0 0 2px rgba(37,99,235,0.15);
+}
+
+
+/* GRID POSTS */
+
+.posts-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+
+/* CARD */
+
+.post-card{
+background:white;
+border-radius:14px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,0.06);
+transition:.35s;
+display:flex;
+flex-direction:column;
+}
+
+.post-card:hover{
+transform:translateY(-6px);
+box-shadow:0 16px 30px rgba(0,0,0,0.12);
+}
+
+
+/* IMAGEM CARD */
+
+.post-card img{
+width:100%;
+height:200px;
+object-fit:cover;
+transition:.4s;
+}
+
+.post-card:hover img{
+transform:scale(1.05);
+}
+
+
+/* CONTEÚDO CARD */
+
+.post-card-content{
+padding:18px;
+display:flex;
+flex-direction:column;
+flex:1;
+}
+
+.post-card h2{
+font-size:18px;
+margin-bottom:10px;
+color:#111827;
+}
+
+.post-card p{
+font-size:14px;
+color:#555;
+margin-bottom:15px;
+flex:1;
+}
+
+
+/* BADGE CATEGORIA */
+
+.badge{
+display:inline-block;
+background:#2563eb;
+color:white;
+font-size:11px;
+padding:4px 10px;
+border-radius:20px;
+margin-bottom:10px;
+font-weight:500;
+}
+
+
+/* BOTÕES CARD */
+
+.card-buttons{
+display:flex;
+gap:8px;
+flex-wrap:wrap;
+}
+
+
+/* ESTADO VAZIO */
+
+.empty-posts{
+text-align:center;
+padding:60px 20px;
+color:#777;
+}
+
+
+/* PÁGINA POST */
+
+.post-container{
+max-width:900px;
+margin:auto;
+background:white;
+padding:40px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+margin-top:40px;
+}
+
+.post-container h1{
+font-size:32px;
+margin-bottom:10px;
+color:#111827;
+}
+
+.post-meta{
+font-size:14px;
+color:#777;
+margin-bottom:20px;
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.post-image{
+width:100%;
+border-radius:12px;
+margin:25px 0;
+max-height:450px;
+object-fit:cover;
+box-shadow:0 10px 20px rgba(0,0,0,0.08);
+}
+
+.post-content{
+font-size:16px;
+line-height:1.7;
+}
+
+.post-content p{
+margin-bottom:14px;
+}
+
+.post-content h2{
+margin-top:25px;
+margin-bottom:10px;
+}
+
+.post-content ul{
+margin-left:20px;
+margin-bottom:14px;
+}
+
+.post-content pre{
+background:#1f2937;
+color:white;
+padding:15px;
+border-radius:8px;
+overflow:auto;
+margin:15px 0;
+}
+
+.post-actions{
+display:flex;
+gap:10px;
+}
+
+
+/* EDITOR LAYOUT */
+
+.editor-layout{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+align-items:start;
+}
+
+
+/* EDITOR */
+
+.editor{
+display:flex;
+flex-direction:column;
+gap:15px;
+padding:20px;
+background:#fafafa;
+border-radius:12px;
+border:1px solid #eee;
+}
+
+
+/* FORM */
+
+.form-group{
+display:flex;
+flex-direction:column;
+gap:6px;
+}
+
+.form-group label{
+font-size:13px;
+font-weight:600;
+color:#555;
+}
+
+
+/* INPUTS */
+
+input,
+textarea,
+select{
+padding:10px 12px;
+border-radius:8px;
+border:1px solid #ddd;
+font-size:14px;
+width:100%;
+transition:.2s;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+outline:none;
+border-color:#2563eb;
+box-shadow:0 0 0 2px rgba(37,99,235,0.15);
+}
+
+textarea{
+min-height:220px;
+resize:vertical;
+}
+
+
+/* NOVA CATEGORIA */
+
+.categoria-actions{
+display:flex;
+gap:8px;
+margin-top:6px;
+}
+
+.categoria-actions input{
+flex:1;
+}
+
+
+/* BOTÃO PUBLICAR */
+
+.btn-publish{
+margin-top:10px;
+padding:12px;
+border:none;
+border-radius:8px;
+background:#10b981;
+color:white;
+font-weight:600;
+cursor:pointer;
+transition:.25s;
+}
+
+.btn-publish:hover{
+background:#059669;
+}
+
+
+/* PREVIEW */
+
+.preview{
+padding:20px;
+background:#fafafa;
+border-radius:12px;
+border:1px solid #eee;
+min-height:500px;
+overflow:auto;
+}
+
+.preview-post h1{
+margin-bottom:10px;
+font-size:24px;
+}
+
+.preview-post p{
+color:#777;
+margin-bottom:15px;
+}
+
+.preview-image{
+width:100%;
+border-radius:10px;
+margin-bottom:20px;
+max-height:300px;
+object-fit:cover;
+}
+
+.preview-content{
+font-size:15px;
+line-height:1.6;
+}
+
+.preview-content p{
+margin-bottom:12px;
+}
+
+
+/* FOOTER */
+
+.footer{
+margin-top:60px;
+text-align:center;
+padding:20px;
+font-size:13px;
+color:#777;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width:900px){
+
+.editor-layout{
+grid-template-columns:1fr;
+}
+
+.post-container{
+padding:25px;
+}
+
+}
+
+@media (max-width:600px){
+
+.header{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.posts-grid{
+grid-template-columns:1fr;
+}
+
+.post-card img{
+height:180px;
+}
+
+.post-container h1{
+font-size:26px;
+}
+
+}
